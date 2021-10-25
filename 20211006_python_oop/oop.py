@@ -3,33 +3,33 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 
 
-def printtype(data):
-    for i in data:
-        print(i, type(i))
+# def printtype(data):
+#     for i in data:
+#         print(i, type(i))
 
 
-test = [123, 'Barry', [1, 2, 3], (1, 2, 3), {1, 2, 3}, True, lambda x: x, {
-    "name": 'henry', "age": 38}]
+# test = [123, 'Barry', [1, 2, 3], (1, 2, 3), {1, 2, 3}, True, lambda x: x, {
+#     "name": 'henry', "age": 38}]
 
 # printtype(test)
 
 # # Defining Classes
 
 
-class Person:
-    name = 'Barry'
-    age = 44
+# class Person:
+#     name = 'Barry'
+#     age = 44
 
 
-person1 = Person()
-person2 = Person()
+# person1 = Person()
+# person2 = Person()
 
-print(person1.name)
-print(person2.name)
+# print(person1.name)
+# print(person2.name)
 
-Person.job = "teacher"
-print(person1.job)
-print(person2.job)
+# Person.job = "teacher"
+# print(person1.job)
+# print(person2.job)
 
 # # Class attributes ve instance attributes
 # Person.name = 'Rafe'
@@ -43,10 +43,10 @@ print(person2.job)
 #     age = 44
 
 #     def test(self):
-#         print('test')
+#         print('hello')
 
 #     def get_details(self):
-#         print('name: ', self.name, 'age', self.age, 'location :', self.location)
+#         print('name: ', self.name, 'age: ', self.age, 'location :', self.location)
 
 #     def set_details(self, name, age, location):
 #         self.name = name
@@ -98,13 +98,14 @@ print(person2.job)
 
 
 # person1 = Person('Barry', 44)
-# # print(person1.name, person1.age)
+# print(person1.name, person1.age)
 
 # # person2 = Person('Rafe', 39)
 # # print(person2.name, person2.age)
 
 # lst = [1, 2, 3]
 # print(len(lst))
+# print(person1)
 # print(len(person1))
 # print(person1.__len__())
 
@@ -185,37 +186,37 @@ print(person2.job)
 #     class Meta:
 #         ordering = ["last_name"]
 
-# class Customer:
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
-#         self.__id = 1234
-#         self.movements = []
+class Customer:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.__id = 1234
+        self.movements = []
 
-#     def __str__(self):
-#         return f"Name : {self.name} Id: {self.__id}"
+    def __str__(self):
+        return f"Name : {self.name} Id: {self.__id}"
 
-#     def add_movement(self, amount, date, explain):
-#         self.movements.append(
-#             {'amount': amount, 'date': date, 'explain': explain})
+    def add_movement(self, amount, date, explain):
+        self.movements.append(
+            {'amount': amount, 'date': date, 'explain': explain})
 
-#     def all_movements(self):
-#         for i in self.movements:
-#             print(i["date"], i["amount"], i["explain"])
+    def all_movements(self):
+        for i in self.movements:
+            print(i["date"], i["amount"], i["explain"])
 
-#     def balance(self):
-#         return sum(i['amount'] for i in self.movements)
-#         # total = 0
-#         # for i in self.movements:
-#         #     total += i["amount"]
-#         # print(total)
+    def balance(self):
+        return sum(i['amount'] for i in self.movements)
+        # total = 0
+        # for i in self.movements:
+        #     total += i["amount"]
+        # print(total)
 
 
-# custom = Customer('barry', 44)
-# print(custom)
-# custom.add_movement(5000, '15.10.2021', 'Salary')
-# custom.add_movement(-1000, '16.10.2021', 'Rent')
-# custom.add_movement(-500, '16.10.2021', 'Bills')
-# custom.add_movement(-2000, '16.10.2021', 'Credit Card')
-# custom.all_movements()
-# print(custom.balance())
+custom = Customer('barry', 44)
+print(custom)
+custom.add_movement(5000, '15.10.2021', 'Salary')
+custom.add_movement(-1000, '16.10.2021', 'Rent')
+custom.add_movement(-500, '16.10.2021', 'Bills')
+custom.add_movement(-2000, '16.10.2021', 'Credit Card')
+custom.all_movements()
+print(custom.balance())
